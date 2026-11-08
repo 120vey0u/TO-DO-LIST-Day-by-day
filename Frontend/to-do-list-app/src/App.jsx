@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
       if (!values) {
         const getValues = async () => {
-        const response = await axios.get(`https://to-do-list-day-by-day.onrender.com//values/${day}`);
+        const response = await axios.get(`https://to-do-list-day-by-day.onrender.com/values/${day}`);
         const result = response.data;
         setValues(result);
 
