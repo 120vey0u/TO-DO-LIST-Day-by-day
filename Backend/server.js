@@ -226,6 +226,6 @@ app.get('/radioChecked/:day', function (req, res) {
     res.json(radioChecked[day]);
 })
 
-app.listen(3030, function () {
+app.listen(3030, '0.0.0.0', function () {
     console.log('Server is running at the URL: http://localhost:3030')
 })
