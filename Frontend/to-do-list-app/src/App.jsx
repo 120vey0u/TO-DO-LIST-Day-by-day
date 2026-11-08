@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
       if (!values) {
         const getValues = async () => {
-        const response = await axios.get(`http://localhost:3030/values/${day}`);
+        const response = await axios.get(`https://to-do-list-day-by-day.onrender.com//values/${day}`);
         const result = response.data;
         setValues(result);
 
@@ -44,7 +44,7 @@ function App() {
   useEffect(() => {
     if (!radioChecked) {
       const getRadioChecked = async () => {
-        const response = await axios.get(`http://localhost:3030/radioChecked/${day}`);
+        const response = await axios.get(`https://to-do-list-day-by-day.onrender.com/radioChecked/${day}`);
         const result = response.data;
         setRadioChecked(result);
 
@@ -80,7 +80,7 @@ function App() {
     setDay(value);
 
     const getValuesChanged = async () => {
-      const response = await axios.get(`http://localhost:3030/values/${value}`);
+      const response = await axios.get(`https://to-do-list-day-by-day.onrender.com/values/${value}`);
       const result = response.data;
       setValues(result);
 
@@ -91,7 +91,7 @@ function App() {
     else setValues(JSON.parse(localStorage.getItem(`values${value}`)));
 
     const getRadioCheckedChanged = async () => {
-      const response = await axios.get(`http://localhost:3030/radioChecked/${value}`);
+      const response = await axios.get(`https://to-do-list-day-by-day.onrender.com/radioChecked/${value}`);
       const result = response.data;
       setRadioChecked(result);
 
