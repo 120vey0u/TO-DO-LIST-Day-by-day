@@ -109,6 +109,7 @@ function App() {
         <select onChange={(e) => {handleSelect(e)}}>
           <option value='07-11-2026'>07-11-2026</option>
           <option value='08-11-2026'>08-11-2026</option>
+          <option value='09-11-2026'>09-11-2026</option>
         </select>
 
         <br />
