@@ -5,7 +5,7 @@ import axios from 'axios';
 
 function App() {
 
-  const [day, setDay] = useState('07-11-2026');
+  const [day, setDay] = useState('09-11-2026');
 
   const [values, setValues] = useState(() => {
     return JSON.parse(localStorage.getItem(`values${day}`)) || null;
@@ -106,12 +106,14 @@ function App() {
   return (
     (!radioChecked || !values)  ? 'Loading...' : 
       <div>
+        <h1>Tasks of a Week from 09-11-2026 to 15-11-2026</h1>
+
         <select onChange={(e) => {handleSelect(e)}}>
-          <option value='07-11-2026'>07-11-2026</option>
-          <option value='08-11-2026'>08-11-2026</option>
           <option value='09-11-2026'>09-11-2026</option>
+          <option value='10-11-2026'>10-11-2026</option>
         </select>
 
+        <br />
         <br />
 
         <label>
@@ -139,7 +141,7 @@ function App() {
 
         <label>
           <h2 style={{ display: 'inline' }}>
-          <input type='checkbox' name='OLPAI' checked={values['OLPAI']} onChange={(e) => {handleClicked(e)}} />OLPAI: <i>Module 1 - Lesson 4 </i>
+          <input type='checkbox' name='OLPAI' checked={values['OLPAI']} onChange={(e) => {handleClicked(e)}} />OLPAI: <i>Module 1 - Lesson 4 OR Computer Vision of Professor Hassan </i>
         </h2></label>
         <label><input type='radio' name='workProgress3' value='zero' style={{ display: 'inline' }} checked={radioChecked['workProgress3']['zero']} onChange={(e) => {handleRadioChecked(e)}} />0%</label>
         <label><input type='radio' name='workProgress3' value='aFourth' style={{ display: 'inline' }} checked={radioChecked['workProgress3']['aFourth']} onChange={(e) => {handleRadioChecked(e)}} />25%</label>
@@ -240,7 +242,7 @@ function App() {
         <br /> <br />
 
         <label>
-          <h2 style={{ display: 'inline' }}><input type='checkbox' name='PS' checked={values['PS']} onChange={(e) => {handleClicked(e)}} />PS: <i>Brainstorm the topic </i>
+          <h2 style={{ display: 'inline' }}><input type='checkbox' name='PS' checked={values['PS']} onChange={(e) => {handleClicked(e)}} />PS: <i>Read about the chapter 3 to evaluate other teams </i>
         </h2></label>
         <label><input type='radio' name='workProgress12' value='zero' style={{ display: 'inline' }} checked={radioChecked['workProgress12']['zero']} onChange={(e) => {handleRadioChecked(e)}} />0%</label>
         <label><input type='radio' name='workProgress12' value='aFourth' style={{ display: 'inline' }} checked={radioChecked['workProgress12']['aFourth']} onChange={(e) => {handleRadioChecked(e)}} />25%</label>
