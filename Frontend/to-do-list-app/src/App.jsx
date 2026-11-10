@@ -18,7 +18,8 @@ function App() {
         const result = response.data;
         setValues(result);
 
-        console.log('GET values successfully!');
+        if (result) console.log('GET values successfully!');
+        else console.log('ERROR!');
         };
 
         getValues();
@@ -48,7 +49,8 @@ function App() {
         const result = response.data;
         setRadioChecked(result);
 
-        console.log('GET values successfully!');
+        if (result) console.log('GET values successfully!');
+        else console.log('ERROR!');
       };
 
       getRadioChecked();
@@ -84,7 +86,8 @@ function App() {
       const result = response.data;
       setValues(result);
 
-      console.log('GET values successfully!');
+      if (result) console.log('GET values successfully!');
+      else console.log('ERROR!');
     };
 
     if (!JSON.parse(localStorage.getItem(`values${value}`))) getValuesChanged();
@@ -95,7 +98,8 @@ function App() {
       const result = response.data;
       setRadioChecked(result);
 
-      console.log('GET values successfully!');
+      if (result) console.log('GET values successfully!');
+      else console.log('ERROR!');
     };
 
     if (!JSON.parse(localStorage.getItem(`radioChecked${value}`))) getRadioCheckedChanged();
